@@ -1,0 +1,75 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Main gradient for the logo -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadow gradient -->
+    <linearGradient id="shadowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <!-- Text gradient -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Filter for shadow -->
+    <filter id="dropshadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="4" result="offset"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle with subtle gradient -->
+  <circle cx="100" cy="80" r="45" fill="url(#shadowGradient)" opacity="0.1"/>
+  
+  <!-- Main logo container -->
+  <rect x="55" y="35" width="90" height="90" rx="20" ry="20" fill="url(#mainGradient)" filter="url(#dropshadow)"/>
+  
+  <!-- Letter "F" design -->
+  <g transform="translate(100, 80)">
+    <!-- Main vertical line of F -->
+    <rect x="-20" y="-25" width="8" height="50" fill="white" rx="2"/>
+    
+    <!-- Top horizontal line of F -->
+    <rect x="-20" y="-25" width="30" height="8" fill="white" rx="2"/>
+    
+    <!-- Middle horizontal line of F -->
+    <rect x="-20" y="-4" width="22" height="8" fill="white" rx="2"/>
+    
+    <!-- Decorative elements -->
+    <circle cx="18" cy="-15" r="3" fill="white" opacity="0.8"/>
+    <circle cx="15" cy="5" r="2" fill="white" opacity="0.6"/>
+  </g>
+  
+  <!-- Company name -->
+  <text x="100" y="155" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="url(#textGradient)">Fynkr</text>
+  
+  <!-- Tagline -->
+  <text x="100" y="175" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b" opacity="0.8">Elevate Your Freelance Business</text>
+  
+  <!-- Decorative elements around the logo -->
+  <circle cx="40" cy="60" r="2" fill="#3b82f6" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="160" cy="100" r="1.5" fill="#059669" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="45" cy="120" r="1" fill="#2563eb" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
